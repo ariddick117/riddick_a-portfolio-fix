@@ -1,0 +1,31 @@
+footer { 
+    background-color: black;
+    color: $footer-text-color;
+    text-align: center;
+}
+
+.copyright {
+    color: white;
+    font-style: normal;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    display: block;
+    width: 75px;
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 30px 0;
+
+    li { 
+        display: inline;
+        
+        a { text-decoration: none; }
+    }
+
+}

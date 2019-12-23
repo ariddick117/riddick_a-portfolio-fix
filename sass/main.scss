@@ -1,0 +1,883 @@
+@import '_vars';
+@import 'modules/_navbar';
+@import 'modules/_users';
+@import 'modules/_lightbox';
+
+@import 'modules/errors'; // error page
+
+// Basic Styling
+.hidden {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    margin: 0 auto;
+    //width: 100vw;
+    color: $main-color;
+    background-color: $body-bg;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    color: $main-color;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $main-gold;
+}
+
+.blueDivider
+{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 3px;
+    width: 248px;
+    background-color: $main-blue;
+}
+
+.goldDivider
+{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 3px;
+    width: 150px;
+    background-color: $main-gold;
+}
+
+// header styling
+.header-logo {
+    display: block;
+    width: 100px;
+    margin-left: 20px;
+    position: relative;
+}
+
+
+// section styling
+.panel:nth-child(odd) {
+    background-color: $odd-img;
+    color: white;
+}
+
+// .panel {
+    
+// }
+
+.angled-divide {
+    //width: 100vw;
+    position: relative;
+    padding-top: 35px;
+}
+
+// section title styling
+.section-title {
+    //margin-top: 15px;
+    color: white;
+}
+
+.section-title h1 {
+    font-size: 30px;
+    margin-top: -5px; //for svgs
+    margin-bottom: 15px;
+}
+
+.section-title h4 {
+    font-size: 15px;
+    font-style: italic;
+    margin: 0;
+}
+
+// section 1 (hero)
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/images/hero_img.jpg") fixed no-repeat;
+    background-position: center;
+}
+
+.hero-sub {
+    margin: 0;
+    font-size: 15px;
+    cursor: default;
+}
+
+.hero-title {
+    margin-top: 5px;
+    margin: 0;
+    font-size: 40px;
+    color: $main-gold;
+    cursor: default;
+}
+
+.hero-button { 
+    display: block; 
+    font-size: 15px;
+    width: 125px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $main-blue;
+    color: white;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.hero-button:hover {
+    opacity: 0.75;
+}
+
+// section 2 (about)
+#top-img {
+    height: 20px;
+}
+
+p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: $body-color;
+    margin-left: 20px;
+}
+
+.left p {
+    margin-right: 20px;
+}
+
+// section 3 (skillset)
+.skillset {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.counter-circle {
+    font-style: italic;
+    min-width: 300px;
+    padding-bottom: 25px;
+}
+
+.counter-circle img {
+    position: absolute;
+    width: 100px;
+    z-index: 20;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.counter-circle input {
+    display: none;
+}
+
+.progress-ring {
+    width: 190px;
+    height: 190px;
+}
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    //stroke: $main-blue;
+}
+
+// section 4 (portfolio)
+#section4 {
+    text-align: center;
+}
+
+p { 
+    color: $body-color;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+// section 5 (contact)
+.contact-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-column h3 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.contact-column hr {
+    display: none;
+}
+
+.contact-column div {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    min-width: 75%;
+    max-width: 90%;
+}
+
+.contact-column p { 
+    color: $body-color;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+#contact-span {
+    color: $main-gold;
+}
+
+.social-connect {
+    width: 50px;
+    padding: 5px;
+}
+
+.reel {
+    height: 150px;
+    width: 275px;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.reel:hover {
+    transform: scale(1.1);
+}
+
+.highlight {
+    height: 75%;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+
+// section 6 (contact form)
+#section6 {
+    justify-content: center;
+}
+
+.else {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+#section6 div {
+    padding-top: 35px;
+    //padding-bottom: 35px;
+}
+
+#section6 h1 {
+    font-size: 40px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+#section6 h1:hover {
+    cursor: default;
+}
+
+p { 
+    color: $body-color;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-form {
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input[type=text], select, textarea {
+    width: 275px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    //resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #f5c116;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    opacity: 0.75;
+}
+
+
+// to top button
+#to-top { 
+    //display: none;
+    position: fixed; 
+    height: 50px;
+    width: 50px;
+    bottom: 40px;
+    margin-left: 110px;
+    background-color: $main-blue;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    border-radius: 50px;
+    // scroll-behavior: smooth;
+    z-index: 2000;
+}
+
+
+// large mobile breakpoint
+@media screen and (min-width: 535px) { 
+    #section6 h1 {
+        font-size: 40px;
+        text-align: left;
+        margin-left: 40px;
+        margin-top: 0;
+    }
+
+    input[type=text], select, textarea {
+        width: 375px;
+        font-size: 16px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 16px;
+        //resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: #f5c116;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+// tablet breakpoint
+@media screen and (min-width: 768px) {
+    
+    // header styling
+    .header-logo {
+        display: block;
+        width: 125px;
+        margin-left: 80px;
+        position: relative;
+    }
+    
+    .section-title h1 {
+        font-size: 48px;
+        margin-top: -5px;
+        margin-bottom: 25px;
+    }
+    
+    .section-title h4 {
+        font-size: 30px;
+        font-style: italic;
+        margin: 0;
+    }
+    
+    // section 1 (hero)
+    .hero-sub {
+        margin: 0;
+        font-size: 30px;
+    }
+    
+    .hero-title {
+        margin-top: 5px;
+        margin: 0;
+        font-size: 90px;
+        color: $main-gold;
+    }
+    
+    .hero-button { 
+        display: block; 
+        font-size: 20px;
+        width: 200px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: $main-blue;
+        color: white;
+        margin-top: 20px;
+        padding: 15px;
+    }
+    
+    // section 2 (about)
+    #top-img {
+        height: 20px;
+    }
+
+    p {
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: $body-color;
+        margin-left: 80px;
+    }
+    
+    .left p {
+        margin-right: 80px;
+    }
+    
+    // section 3 (skillset)
+    .skillset {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .counter-circle {
+        font-style: italic;
+        min-width: 300px;
+        padding-bottom: 25px;
+    }
+    
+    .counter-circle input {
+        display: none;
+    }
+    
+    .progress-ring {
+        width: 190px;
+        height: 190px;
+    }
+    
+    .progress-ring__circle {
+        transition: 0.35s stroke-dashoffset;
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        //stroke: $main-blue;
+    }
+    
+    // section 4 (portfolio)
+    #section4 {
+        text-align: center;
+    }
+    
+    p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    // section 5 (contact)
+    .contact-column {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-column h3 {
+        font-size: 40px;
+        margin: 10px;
+    }
+    
+    .contact-column div {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 45%;
+        max-width: 48%;
+    }
+    
+    .contact-column p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+        font-size: 18px;
+    }
+    
+    .social-connect {
+        width: 50px;
+        padding: 5px;
+    }
+    
+    .reel {
+        height: 200px;
+        width: 400px;
+    }
+    
+    
+    // section 6 (contact form)
+    #section6 {
+        justify-content: center;
+    }
+
+    .else {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+    
+    #section6 div {
+        padding-top: 35px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    
+    #section6 h1 {
+        font-size: 70px;
+        text-align: left;
+        margin-left: 120px;
+    }
+    
+    #section6 h1:hover {
+        cursor: default;
+    }
+    
+    p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    .contact-form {
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 44px;
+        padding: 20px;
+    }
+    
+    input[type=text], select, textarea {
+        width: 500px;
+        font-size: 16px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 16px;
+        //resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: #f5c116;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    
+    // to top button
+    #to-top { 
+        //display: none;
+        position: fixed; 
+        height: 50px;
+        width: 50px;
+        bottom: 70px;
+        margin-left: 310px;
+        background-color: $main-blue;
+        color: white;
+        text-decoration: none;
+        font-size: 50px;
+        border-radius: 50px;
+        // scroll-behavior: smooth;
+        z-index: 2000;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    
+}
+
+// desktop breakpoint
+@media screen and (min-width: 1024px) {
+    
+    // header styling
+    .header-logo {
+        display: block;
+        width: 125px;
+        margin-left: 80px;
+        position: relative;
+    }
+    
+    // section styling
+    .panel:nth-child(odd) {
+        background-color: $odd-img;
+        color: white;
+    }
+    
+    .angled-divide {
+        position: relative;
+        padding-top: 35px;
+    }
+    
+    // section title styling    
+    .section-title h1 {
+        font-size: 48px;
+        margin-top: -5px;
+        margin-bottom: 25px;
+    }
+    
+    .section-title h4 {
+        font-size: 20px;
+        font-style: italic;
+        margin: 0;
+    }
+    
+    // section 1 (hero)
+    .hero {
+        height: 100vh;
+        // width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-sub {
+        margin: 0;
+        font-size: 30px;
+    }
+    
+    .hero-title {
+        margin-top: 5px;
+        margin: 0;
+        font-size: 135px;
+        color: $main-gold;
+    }
+    
+    .hero-button { 
+        display: block; 
+        width: 200px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 auto;
+        border-radius: 3px;
+        background-color: $main-blue;
+        color: white;
+        margin-top: 40px;
+        padding: 10px;
+    }
+    
+    // section 2 (about)
+    #top-img {
+        height: 20px;
+    }
+
+    #column-p {
+        display: flex;
+        justify-content: center;
+    }
+    
+    p {
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: $body-color;
+        margin-left: 80px;
+    }
+    
+    .left p {
+        margin-right: 0;
+    }
+    
+    // section 3 (skillset)
+    .skillset {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .counter-circle {
+        font-style: italic;
+        min-width: 400px;
+        padding-bottom: 25px;
+    }
+    
+    .counter-circle input {
+        display: none;
+    }
+    
+    .progress-ring {
+        width: 190px;
+        height: 190px;
+    }
+    
+    .progress-ring__circle {
+        transition: 0.35s stroke-dashoffset;
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        //stroke: $main-blue;
+    }
+    
+    // section 4 (portfolio)
+    #section4 {
+        text-align: center;
+    }
+    
+    p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    // section 5 (contact)
+    .contact-column {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contact-column h3 {
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .contact-column hr {
+        display: block;
+    }
+    
+    .contact-column div {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 30%;
+        max-width: 32%;
+    }
+    
+    .contact-column p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+        font-size: 18px;
+    }
+    
+    .social-connect {
+        width: 50px;
+        padding: 5px;
+    }
+    
+    .reel {
+        height: 225px;
+        width: 100%;
+    }
+    
+    
+    // section 6 (contact form)
+    #section6 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .else {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+    
+    #section6 div {
+        min-width: 45%;
+        max-width: 49%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    
+    #section6 h1 {
+        font-size: 70px;
+        text-align: left;
+        margin-left: 80px;
+    }
+    
+    #section6 h1:hover {
+        cursor: default;
+    }
+    
+    p { 
+        color: $body-color;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    .contact-form {
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 44px;
+        padding: 20px;
+    }
+    
+    input[type=text], select, textarea {
+        width: 500px;
+        font-size: 16px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 16px;
+        //resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: #f5c116;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    
+    // to top button
+    #to-top { 
+        //display: none;
+        position: fixed; 
+        height: 50px;
+        width: 50px;
+        bottom: 40px;
+        margin-left: 610px;
+        background-color: $main-blue;
+        color: white;
+        text-decoration: none;
+        font-size: 50px;
+        border-radius: 50px;
+        // scroll-behavior: smooth;
+        z-index: 2000;
+    }
+}
+
+@import 'modules/_footer'
